@@ -7,16 +7,21 @@
  */
 public class Alimento
 {
-    
+    //Nombre del alimento
     private String nombre;
+    //Almacena la cantidad de proteinas del alimento
     private float proteinas;
+    //Almacena la cantidad de carbohidratos del alimento
     private float carbohidratos;
+    //Almacena la cantidad de grasas del alimento
     private float grasas;
+    //Almacena la cantidad de calorias del alimento
     private float calorias;
+    //Almacena el componente mayoritario del aliemnto 
     private String comMayo;
 
     /**
-     * 
+     * Pide los datos del alimento y calcula los porcentajes del alimento y el total de las calorias
      */
     public Alimento(String nombre,float proteinas, float carbohidratos, float grasas)
     {
@@ -55,8 +60,10 @@ public class Alimento
         }
         
     }
-    
-    public void mestraDatos()
+    /**
+     *  Muestra todos los datos del alimento
+     */
+    public void muestraDatos()
     {
         System.out.println("Nombre:                            "+ nombre);
         System.out.println("Proteinas por cada 100 gramos:     "+ proteinas);
@@ -65,4 +72,33 @@ public class Alimento
         System.out.println("Calorias:                          "+ calorias);
         System.out.println("Componente/s mayoritario/s:        "+ comMayo);
     }
+    /**
+     *  Devuelve las proteinas del alimento
+     */
+    public float getProteinas()
+   {
+       return proteinas;
+   }
+   /**
+     *  Devuelve los carbohidratos del alimento
+     */
+     public float getCarbohidratos()
+   {
+       return carbohidratos;
+   }
+   /**
+     *  Devuelve las grasas del alimento
+     */
+     public float getGrasas()
+   {
+       return grasas;
+   }
+   /**
+     *  Devuelve las calorias del alimento
+     */
+     public float getCalorias()
+   {
+       return calorias;
+   }
 }
+

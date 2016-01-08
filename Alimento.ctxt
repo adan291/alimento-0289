@@ -1,7 +1,20 @@
 #BlueJ class context
 comment0.params=nombre\ proteinas\ carbohidratos\ grasas
 comment0.target=Alimento(java.lang.String,\ float,\ float,\ float)
-comment0.text=\r\n\ \r\n
+comment0.text=\r\n\ Pide\ los\ datos\ del\ alimento\ y\ calcula\ los\ porcentajes\ del\ alimento\ y\ el\ total\ de\ las\ calorias\r\n
 comment1.params=
-comment1.target=void\ mestraDatos()
-numComments=2
+comment1.target=void\ muestraDatos()
+comment1.text=\r\n\ \ Muestra\ todos\ los\ datos\ del\ alimento\r\n
+comment2.params=
+comment2.target=float\ getProteinas()
+comment2.text=\r\n\ \ Devuelve\ las\ proteinas\ del\ alimento\r\n
+comment3.params=
+comment3.target=float\ getCarbohidratos()
+comment3.text=\r\n\ \ Devuelve\ los\ carbohidratos\ del\ alimento\r\n
+comment4.params=
+comment4.target=float\ getGrasas()
+comment4.text=\r\n\ \ Devuelve\ las\ grasas\ del\ alimento\r\n
+comment5.params=
+comment5.target=float\ getCalorias()
+comment5.text=\r\n\ \ Devuelve\ las\ calorias\ del\ alimento\r\n
+numComments=6
