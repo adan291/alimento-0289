@@ -7,98 +7,85 @@
  */
 public class Alimento
 {
-    //Nombre del alimento
+    //Guarda el nombre del alimento
     private String nombre;
-    //Almacena la cantidad de proteinas del alimento
+    //Guarda las proteínas del alimento
     private float proteinas;
-    //Almacena la cantidad de carbohidratos del alimento
+    //Guarda los carbohidratos del alimento
     private float carbohidratos;
-    //Almacena la cantidad de grasas del alimento
+    //Guarda las grasas del alimento
     private float grasas;
-    //Almacena la cantidad de calorias del alimento
+    //Guarda las calorias del alimento
     private float calorias;
-    //Almacena el componente mayoritario del aliemnto 
-    private String comMayo;
-
     /**
-     * Pide los datos del alimento y calcula los porcentajes del alimento y el total de las calorias
+     * Constructor for objects of class Alimento
      */
-    public Alimento(String nombre,float proteinas, float carbohidratos, float grasas)
+    public Alimento(String nombre, float proteinas, float carbohidratos, float grasas)
     {
         this.nombre = nombre;
         this.proteinas = proteinas;
         this.carbohidratos = carbohidratos;
         this.grasas = grasas;
-        calorias = (proteinas*4) + (carbohidratos*4) + (grasas*9);
-        if (proteinas < grasas && carbohidratos < grasas && proteinas != carbohidratos)
-        {
-            comMayo = "Grasas";
-        }
-        else if (grasas < proteinas && carbohidratos < proteinas && grasas != carbohidratos)
-        {
-            comMayo = "Proteinas";
-        }
-        else if (grasas < carbohidratos && proteinas < carbohidratos && grasas != proteinas)
-        {
-            comMayo = "Carbohidratos";
-        }
-        else if ( grasas == carbohidratos && proteinas == carbohidratos)
-        {
-            comMayo = "Grasas, proteinas y carbohidratos";
-        }
-        else if ( grasas == carbohidratos)
-        {
-            comMayo = "Grasas y carbohidratos";
-        }
-        else if (grasas == proteinas)
-        {
-            comMayo = "Grasas y proteinas";
-        }
-        else if (proteinas == carbohidratos)
-        {
-            comMayo = "Proteinas y carbohidratos";
-        }
-        
+        calorias = (proteinas * 4) + (carbohidratos * 4) + (grasas * 9);
     }
+    
     /**
-     *  Muestra todos los datos del alimento
+     * Nos devuelve los gramos de proteinas que tiene el alimento
+     */
+    public float getProteinas() 
+    {
+        return proteinas;
+    }
+    
+    /**
+     * Nos devuelve los gramos de grasas que tiene el alimento
+     */
+    public float getGrasas() 
+    {
+        return grasas;
+    }
+    
+    /**
+     * Nos devuelve los gramos de carbohidratos que tiene el alimento
+     */
+    public float getCarbohidratos() 
+    {
+        return carbohidratos;
+    }
+    
+    /**
+     * Nos devuelve las calorías que tiene el alimento
+     */
+    public float getCalorias() 
+    {
+        return calorias;
+    }
+
+    /**
+     * Este método nos muestra los valores de los distintos componentes del alimento 
      */
     public void muestraDatos()
     {
-        System.out.println("Nombre:                            "+ nombre);
-        System.out.println("Proteinas por cada 100 gramos:     "+ proteinas);
-        System.out.println("Carbohidratos por cada 100 gramos: "+ carbohidratos);
-        System.out.println("Grasas por cada 100 gramos:        "+ grasas);
-        System.out.println("Calorias:                          "+ calorias);
-        System.out.println("Componente/s mayoritario/s:        "+ comMayo);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Proteinas por cada 100 gramos: " + proteinas);
+        System.out.println("Carbohidratos por cada 100 gramos: " + carbohidratos);
+        System.out.println("Grasas por cada 100 gramos: " + grasas);
+        System.out.println("Calorias: " + calorias);
+        String mayoritario = "proteínas";
+        float mayor = proteinas;
+        if (carbohidratos == mayor) {
+            mayoritario = "carbohidratos, proteínas";
+        }
+        else if (carbohidratos > mayor) {
+            mayor = carbohidratos;
+            mayoritario = "carbohidratos";
+        }
+        if (grasas == mayor) {
+            mayoritario = "grasas, " + mayoritario;
+        }
+        else if (grasas > mayor) {
+            mayoritario = "grasas";
+        }
+        System.out.println("Componente/s mayoritario/s: " + mayoritario);
     }
-    /**
-     *  Devuelve las proteinas del alimento
-     */
-    public float getProteinas()
-   {
-       return proteinas;
-   }
-   /**
-     *  Devuelve los carbohidratos del alimento
-     */
-     public float getCarbohidratos()
-   {
-       return carbohidratos;
-   }
-   /**
-     *  Devuelve las grasas del alimento
-     */
-     public float getGrasas()
-   {
-       return grasas;
-   }
-   /**
-     *  Devuelve las calorias del alimento
-     */
-     public float getCalorias()
-   {
-       return calorias;
-   }
 }
-

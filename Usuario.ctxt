@@ -1,11 +1,20 @@
 #BlueJ class context
-comment0.params=nombre
+comment0.params=nombreCompleto
 comment0.target=Usuario(java.lang.String)
-comment0.text=\r\n\ Constructor\ que\ pide\ el\ nombre\ \r\n
-comment1.params=comida\ cantidad
+comment0.text=\r\nConstructor\ de\ la\ clase\ usuario\r\n
+comment1.params=alimentoQueCome\ gramosDelAlimento
 comment1.target=void\ comer(Alimento,\ float)
-comment1.text=\r\n\ \ Metodo\ que\ permite\ comer\ un\ alimento\r\n
+comment1.text=\r\n\ Metodo\ utilizado\ para\ dar\ de\ comer\ al\ usuario\r\n
 comment2.params=
-comment2.target=void\ MostrarDatos()
-comment2.text=\r\n\ Metodo\ mostrar\ los\ datos\ de\ la\ persona\ con\ los\ alimentos\ ingeridos\r\n
-numComments=3
+comment2.target=void\ muestraDatos()
+comment2.text=\r\n\ Metodo\ que\ muestra\ la\ informacion\ de\ lo\ ingerido\ por\ el\ usuario.\r\n
+comment3.params=
+comment3.target=float\ getCaloriasIngeridas()
+comment3.text=\r\n\ \ Metodo\ que\ devuelve\ las\ calorias\ totales\ que\ ha\ consumido\ el\ usuario\r\n
+comment4.params=
+comment4.target=java.lang.String\ getNombreCompleto()
+comment4.text=\r\n\ \ Metodo\ que\ devuelve\ el\ nombre\ del\ usuario\r\n
+comment5.params=segundoUsuario
+comment5.target=void\ comparacion(Usuario)
+comment5.text=\r\n\ Metodo\ que\ compara\ las\ estadisticas\ de\ un\ usuario\ con\ otro\r\n
+numComments=6
