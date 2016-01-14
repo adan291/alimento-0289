@@ -11,6 +11,10 @@ public class Usuario
     private float grasasIngeridas;
     //calorias totales ingeridas por el usuario
     private float caloriasIngeridas;
+    //nombre del alimento mas calorico que ha consumido el usuario
+    private String nombreDelAlimentoMasCalorico;
+    //calorias del alimento mas calorico consumido por el usuario
+    private float caloriasAlimentoMasCalorico;
 
     /**
     *Constructor de la clase usuario
@@ -22,6 +26,8 @@ public class Usuario
         carbohidratosIngeridos = 0;
         grasasIngeridas = 0;
         caloriasIngeridas = 0;
+        nombreDelAlimentoMasCalorico=null;
+        caloriasAlimentoMasCalorico=0;
     }
     
     /**
@@ -33,9 +39,23 @@ public class Usuario
         carbohidratosIngeridos = carbohidratosIngeridos + (alimentoQueCome.getCarbohidratos() / 100 * gramosDelAlimento);
         grasasIngeridas = grasasIngeridas + (alimentoQueCome.getGrasas() / 100 * gramosDelAlimento);
         caloriasIngeridas = caloriasIngeridas + (alimentoQueCome.getCalorias() / 100 * gramosDelAlimento);
+        if (caloriasAlimentoMasCalorico<=alimentoQueCome.getCalorias()){
+            caloriasAlimentoMasCalorico = alimentoQueCome.getCalorias();
+            nombreDelAlimentoMasCalorico = alimentoQueCome.getNombre();
+        }
     }
-    
-    
+    /**
+     * Metodo que muestra el nombre del alimento mas calorico
+     */
+     public void  nombreDelAlimentoMasCalorico()
+    {
+        if (nombreDelAlimentoMasCalorico == null){
+             System.out.println("No se ha realizado aun ninguna consumicion de alimentos");
+        }
+        else{
+        System.out.println("Alimento más calórico ingerido por este usuario hasta el momento: " + nombreDelAlimentoMasCalorico + " ( " + caloriasAlimentoMasCalorico + " ) " );
+       }
+    }
     
     /**
     * Metodo que muestra la informacion de lo ingerido por el usuario.
