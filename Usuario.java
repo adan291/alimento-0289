@@ -125,6 +125,7 @@ public class Usuario
             System.out.println(nombreCompleto + " Ha consumido las mismas calorias que " + segundoUsuario.getNombreCompleto() + " ( " + caloriasIngeridas + " Iguales a " + segundoUsuario.getCaloriasIngeridas() + " ) ");
         }
     }
+
     /**
      * Metodo para mostrar los datos de los alimentos consumidos por alimento elejido
      */
@@ -138,5 +139,28 @@ public class Usuario
         else{
             System.out.println("La posicion " + (index+1) + " que has elejido no corresponde a ningun alimento");
         }
+    }
+
+    /**
+     * Metodo que muestras las veces ingeridas un alimento
+     */
+    public void cantidadDeVecesIngeridas(String nombreAlimento)
+    {
+        int cont = 0;
+        for (Alimento alimentosConsumidos : alimentos)
+        {
+            if (alimentosConsumidos.getNombre().contains(nombreAlimento))
+            {
+                cont = cont + 1;
+            }
+        }
+        if (cont == 0)
+        {
+            System.out.println( "El usuario no ha consumido ese alimento");
+        }
+		else
+		{
+			 System.out.println( "El usuario ha consumido "  + nombreAlimento + cont + " vez/veces " );
+		}
     }
 }
