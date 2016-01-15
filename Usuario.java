@@ -160,7 +160,7 @@ public class Usuario
         }
 		else
 		{
-			 System.out.println( "El usuario ha consumido "  + nombreAlimento + cont + " vez/veces " );
+			 System.out.println( "El usuario ha consumido "  + nombreAlimento + " " + cont + " vez/veces " );
 		}
     }
 }
