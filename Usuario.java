@@ -18,6 +18,8 @@ public class Usuario
     private float caloriasAlimentoMasCalorico;
     //Alimentos consumidos por el ususario
     private ArrayList<Alimento>alimentos;
+	//Aliemtos consumidos mas de una vez
+	//Crear para nueva lista para poner los otros dos For en el metodo private ArrayList<Alimento>alimentosConsumidosRepetidos;
 
     /**
      *Constructor de la clase usuario
@@ -158,9 +160,43 @@ public class Usuario
         {
             System.out.println( "El usuario no ha consumido ese alimento");
         }
-		else
-		{
-			 System.out.println( "El usuario ha consumido "  + nombreAlimento + " " + cont + " vez/veces " );
-		}
+        else if ( cont == 1)
+        {
+            System.out.println( "El usuario ha consumido "  + nombreAlimento + " " + cont + " " + "vez");
+        }
+        else
+        {
+            System.out.println( "El usuario ha consumido "  + nombreAlimento + " " + cont + " veces " );
+        }
+    }
+
+     /**
+     * Metodo que muestras los nombres de los alimentos consumidos repetidos
+     */
+	public void nombreDeLosAlimentosConsumuidos()
+    {
+        for (Alimento alimentosConsumidos : alimentos)
+        {
+            int cont = 0;
+            Alimento alimentoActualConsumido = alimentosConsumidos;
+            for (Alimento alimentosConsumidos1 : alimentos)
+            {
+                if (alimentoActualConsumido.getNombre().contains(alimentosConsumidos))
+                {
+					cont = cont + 1;
+                }
+				
+				if (cont > 1)
+				{
+					//for(Alimentos alimentosConsumidos2 
+				//crear los otros 2 for para contar y no repetir la frase
+					 System.out.println( "El alimento " + aalimentoActualConsumido.getNombre() + " lo ha consumido "+ cont + "veces");
+				}
+				else
+				{
+					System.out.println( "El alimento " + aalimentoActualConsumido.getNombre() + " no se ha consumido mas de una vez");
+				}
+			}
+        }
     }
 }
